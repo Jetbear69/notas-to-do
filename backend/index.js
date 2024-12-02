@@ -19,7 +19,7 @@ app.use(express.json());
 
 app.use(
     cors({
-        origin:'https://notas-to-do-eta.vercel.app',
+        origin:['https://notas-to-do-eta.vercel.app'],
         credentials: true,
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
     })
