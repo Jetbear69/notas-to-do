@@ -30,7 +30,7 @@ const Login = () => {
     //Logueo y llamado de la api
 
     try {
-      const response = await axiosInstance.post('/login', {
+      const response = await axiosInstance.post('https://notas-to-do-eta.vercel.app/login', {
         email: email,
         password: password,
       });
