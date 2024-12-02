@@ -36,7 +36,7 @@ const SignUp = () => {
     //Registro y llamado de la api
     
     try {
-      const response = await axiosInstance.post('/create-account', {
+      const response = await axiosInstance.post('https://notas-to-do-api.vercel.app/create-account', {
         fullName: name,
         email: email,
         password: password,
