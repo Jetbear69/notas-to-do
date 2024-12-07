@@ -8,7 +8,10 @@ const AddEditNotes = ({ noteData, type, getAllNotes, onClose, showToastMessage }
     const [content, setContent] = useState(noteData?.content || '');
     const [tags, setTags] = useState(noteData?.tags || []);
     const [error, setError] = useState(null);
-
+    const [status, setStatus] = useState(noteData?.status || 'Pending');
+    const toggleStatus = () => {
+        setStatus((prevStatus) => (prevStatus === 'Pending' ? 'Completed' : 'Pending'));
+    };
     // Agregar notas
     const addNewNote = async () => {
         try {

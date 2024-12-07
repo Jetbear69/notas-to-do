@@ -15,13 +15,12 @@ const jwt = require('jsonwebtoken');
 const { authenticateToken } = require('./utilities');
 
 
+
 app.use(express.json());
 
 app.use(
     cors({
-        origin:['https://notas-to-do-eta.vercel.app'],
-        credentials: true,
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        origin:'*',
     })
 );
 
@@ -421,8 +420,6 @@ app.put('/update-note-status/:id', authenticateToken, async (req, res) => {
     }
 });
 
-app.listen(3001, () => {
-    console.log('Server is Running')
-});
+app.listen(8000);
 
 module.exports = app;
