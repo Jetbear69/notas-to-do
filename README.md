@@ -58,13 +58,15 @@ ademas que seguiré realizando modificaciones adicionales en un futuro.
    ```
 4. Iniciar el servidor  
    ```bash
-   npm run dev
+   cd backend
+   npm run start
    ```
 
 ### Configuración del Frontend
 1. Navegar al directorio del frontend  
    ```bash
    cd frontend
+   cd notes-app
    npm install
    ```
 2. Iniciar la aplicación  
